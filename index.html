@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
+</head>
+
+
+
+<style>
+   @keyframes spin2 {
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+   
+    .animate-spin2{
+        animation: spin2 20s infinite;
+    }
+
+</style>
+
+
+
+
+<body>
+    <nav class="flex fixed w-full items-center justify-between px-10 bg-blue-0 font-serif">
+        <div class="flex items-center text-[#fea116] gap-3">
+            <i class="ri-restaurant-fill w-[75px] h-[70px] my-2 text-center text-white bg-[#fea116] rounded-full text-[55px]"></i>
+            <h1 class="text-[45px] text-shadow-lg text-shadow-sky-950">Restoran</h1>
+        </div>
+        <ul class="hidden md:flex items-center justify-between w-[50%] text-white">
+            <li class="hover:text-[#fea116]">HOME</li>
+            <li class="hover:text-[#fea116]">ABOUT</li>
+            <li class="hover:text-[#fea116]">SERVICE</li>
+            <li class="hover:text-[#fea116]">MENU</li>
+            <div class="flex items-center hover:text-[#fea116]">
+                <li>PAGES</li>
+                <i class="ri-arrow-down-s-fill"></i>
+            </div>
+            <li class="hover:text-[#fea116]">CONTACT</li>
+            <button class="ring-2 bg-[#fea116] p-3 font-sans font-bold w-[170px] rounded-[50px] shadow-md shadow-white">BOOK A TABLE</button>
+        </ul>
+        <i class="md:hidden ri-menu-line text-[30px] text-[#fea116]"></i>
+    </nav>
+
+
+
+
+    <!-- SECTION 1 START  -->
+    <div class="min-h-[120vh] bg-[url('./pictures/bg-hero.jpg')] bg-cover w-full overflow-hidden">
+        <div class="min-h-[120vh] flex flex-col md:flex-row items-center justify-center w-full bg-gray-900/90 text-white  gap-9 md:gap-0">
+            <div class="md:h-[85vh] md:w-[45%] bg-sky-0 relative text-center md:text-start">
+                <img src="./pictures/yummy.png" alt="" class="hidden md:block size-50 absolute left-94 top-12">
+                <h1 class="text-[79px] font-bold pt-20">Enjoy Our <span class="text-[#fea116] font-semibold">Delicious</span> Meal</h1>
+                <p class="my-4 text-[19px]">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.</p>
+                <button class="ring-2 bg-[#fea116] p-3 mt-6 font-sans font-bold w-[170px] shadow-md shadow-white">BOOK A TABLE</button>
+            </div>
+            <div class="md:h-[85vh] md:w-[45%] bg-sky-0 flex items-center justify-center">
+                <img src="./pictures/hero.png" alt="" class="md:size-[550px] animate-spin2">
+            </div>
+        </div>
+    </div>
+    <!-- SECTION 1 END  -->
+
+
+
+
+
+</body>
+</html>
