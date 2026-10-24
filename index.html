@@ -13,8 +13,9 @@
 </head>
 
 
-
 <style>
+
+
    @keyframes spin2 {
         from{
             transform: rotate(0deg);
@@ -23,6 +24,7 @@
             transform: rotate(360deg);
         }
     }
+
    
     .animate-spin2{
         animation: spin2 20s infinite;
@@ -42,13 +44,17 @@
         animation: bounce2 1s ease-in-out;
     }
 
+    html,body{
+        overflow-x: hidden;
+    }
+
 </style>
 
 
 
 
 <body>
-    <nav class="flex z-1 fixed w-full items-center justify-between px-10 bg-blue-0 font-serif">
+    <nav class="flex z-1 fixed w-full items-center justify-between px-9 bg-blue-00 font-serif">
         <div class="flex items-center text-[#fea116] gap-3">
             <i class="ri-restaurant-fill w-[75px] h-[70px] my-2 text-center text-white bg-[#fea116] rounded-full text-[55px]"></i>
             <h1 class="text-[45px] text-shadow-lg text-shadow-sky-950">Restoran</h1>
@@ -72,16 +78,16 @@
 
 
     <!-- SECTION 1 START  -->
-    <div class="min-h-[120vh] bg-[url('./pictures/bg-hero.jpg')] bg-cover w-full overflow-hidden">
+    <div class="min-h-[120vh] bg-[url('./pictures/bg-hero.jpg')] bg-cover w-full">
         <div class="min-h-[120vh] flex flex-col md:flex-row items-center justify-center w-full bg-gray-900/90 text-white  gap-9 md:gap-0">
             <div class="md:h-[85vh] md:w-[45%] bg-sky-0 relative text-center md:text-start">
                 <img src="./pictures/yummy.png" alt="" class="hidden md:block size-50 absolute left-94 top-12 ">
-                <h1 class="text-[79px] font-bold pt-20" data-aos="fade-right" data-aos-duration="900">Enjoy Our <span class="text-[#fea116] font-semibold" data-aos="fade-right" data-aos-duration="1100">Delicious</span> Meal</h1>
+                <h1 class="text-[65px] md:text-[79px] font-bold pt-20" data-aos="fade-right" data-aos-duration="900">Enjoy Our <span class="text-[#fea116] font-semibold" data-aos="fade-right" data-aos-duration="1100">Delicious</span> Meal</h1>
                 <p class="my-4 text-[19px]" data-aos="fade-right" data-aos-duration="700">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.</p>
                 <button class="ring-2 bg-[#fea116] p-3 mt-6 font-sans font-bold w-[170px] shadow-md shadow-white hover:scale-95 hover:bg-black">BOOK A TABLE</button>
             </div>
             <div class="md:h-[85vh] md:w-[45%] bg-sky-0 flex items-center justify-center">
-                <img src="./pictures/hero.png" alt="" class="md:size-[550px] animate-spin2">
+                <img src="./pictures/hero.png" alt="" class="w-full md:size-[550px] animate-spin2">
             </div>
         </div>
     </div>
@@ -91,7 +97,7 @@
 
 
 <!-- SECTION 2 START -->
-    <div class="min-h-[50vh] w-[90%] mx-auto my-20 bg-red-0 flex flex-wrap items-center justify-between gap-6 md:gap-0">
+    <div class="min-h-[50vh] w-[90%] mx-auto my-20 bg-red-00 flex flex-wrap items-center justify-between gap-6 md:gap-0">
 
 
         <div class="min-h-[40vh] relative md:w-[22%] bg-white border-5 border-[#fea116] border-double shadow-[#fea116] shadow-[0px_0px_10px] flex flex-col items-start justify-start px-5 hover:bg-yellow-600 hover:text-white" data-aos="fade-up" data-aos-duration="300">
@@ -144,15 +150,15 @@
         <p class="text-center md:text-start">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos erat ipsum et lorem et sit, sed stet lorem sit.</p>
         <p class="text-center md:text-start">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
 
-            <div class="h-[11vh] md:w-[90%] bg-gray-00 flex items-center justify-between md:mx-0 mx-3">
-                <div class="h-[10vh] md:w-[45%] bg-purple-00 flex items-center border-l-4 border-[#fea116] ml-2 md:ml-0 gap-4">
-                    <div class="text-[62px] font-extrabold text-[#fea116] ml-3">15</div>
-                    <div class="text-[20px]">years of <span class="font-bold text-[22px]">Experience</span></div>
+            <div class="min-h-[11vh] w-[90%] bg-gray-00 flex items-center justify-between md:mx-0 mx-3">
+                <div class="min-h-[10vh] w-[45%] md:w-[45%] bg-purple-00 flex items-center border-l-4 border-[#fea116] ml-2 md:ml-0 gap-4">
+                    <div class="md:text-[62px] text-[50px] font-extrabold text-[#fea116] ml-3">15</div>
+                    <div class="text-[20px]">years of <span class="font-bold text-[18px] md:text-[22px]">Experience</span></div>
                 </div>
 
-                 <div class="h-[10vh] md:w-[52%] bg-purple-0 flex items-center border-l-4 border-[#fea116] gap-4">
-                    <div class="text-[62px] font-extrabold text-[#fea116] ml-3">50</div>
-                    <div class="text-[20px]">Popular <br> <span class="font-bold text-[22px]">Master Chefts</span></div>
+                 <div class="min-h-[10vh] w-[45%] md:w-[52%] bg-purple-00 flex items-center border-l-4 border-[#fea116] gap-4">
+                    <div class="md:text-[62px] text-[50px] font-extrabold text-[#fea116] ml-3">50</div>
+                    <div class="text-[20px]">Popular <br> <span class="font-bold md:text-[22px] text-[18px]">Master Chefts</span></div>
                 </div>
             </div>
 
@@ -167,11 +173,11 @@
 
 <!-- SECTION 4 START  -->
 <div class="min-h-[100vh] md:w-[95%] mx-auto mt-10 bg-gray-0">
-    <div class="min-h-[20vh] md:w-[40%] mx-auto font-bold text-center bg-gray-0">
+    <div class="min-h-[20vh] md:w-[40%] mx-auto font-bold text-center bg-gray-0"  data-aos-duration="900" data-aos="fade-right">
         <p class="text-[25px]">Food Menu</p>
         <h1 class="text-[50px] text-[#fea116] border-1 shadow-md shadow-[#fea116]">Most Popular Items</h1>
     </div>
-    <div class="min-h-[10vh] md:w-[35%] flex items-center justify-between mx-auto bg-gray-00 my-5 px-2">
+    <div class="min-h-[10vh] md:w-[35%] flex items-center justify-between mx-auto bg-gray-00 my-5 px-2" data-aos-duration="900" data-aos="fade-left">
 
         <div class="min-h-[10vh] w-[31%] bg-pink-00 border-[#fea116] border-2 border-dashed rounded-[10px] flex items-center justify-evenly">
             <i class="ri-cup-fill text-[40px] text-[#fea116]"></i>
@@ -189,13 +195,13 @@
         </div>
     </div>
 
-    <div class="min-h-[90vh] w-[90%] flex flex-wrap items-center bg-gray-00 mx-auto justify-between mt-12">
+    <div class="min-h-[90vh] w-[90%] flex flex-wrap items-center bg-gray-00 mx-auto md:gap-0 gap-8 md:justify-between mt-12" data-aos="fade-up"  data-aos-duration="800">
 
         <div class="h-[15vh] md:w-[48%] bg-pink-00 flex items-center justify-between shadow-sm shadow-[#f0b966] px-3">
             <img src="./pictures/menu-1.jpg" alt="" class="mr-3 md:mr-0">
             <div class="w-[83%] h-[14vh] bg-purple-00 flex flex-col items-centerj justify-between">
                 <div class="h-[7vh] w-[100%] bg-white border-b-1 border-gray-300 flex items-center justify-between">
-                    <h1 class="text-[20px] font-bold">Chicken Burger</h1>
+                    <h1 class="text-[20px] font-bold">Mushrooms</h1>
                     <p class="text-[20px] font-bold text-[#fea116]">$119</p>
                 </div>
                 <div class="h-[6vh] w-[100%] bg-white">
@@ -208,7 +214,7 @@
             <img src="./pictures/menu-2.jpg" alt="" class="mr-3 md:mr-0">
             <div class="w-[83%] h-[14vh] bg-purple-00 flex flex-col items-centerj justify-between">
                 <div class="h-[7vh] w-[100%] bg-white border-b-1 border-gray-300 flex items-center justify-between">
-                    <h1 class="text-[20px] font-bold">Chicken Burger</h1>
+                    <h1 class="text-[20px] font-bold">Sweet potatoes</h1>
                     <p class="text-[20px] font-bold text-[#fea116]">$119</p>
                 </div>
                 <div class="h-[6vh] w-[100%] bg-white">
@@ -221,8 +227,8 @@
             <img src="./pictures/menu-3.jpg" alt="" class="mr-3 md:mr-0">
             <div class="w-[83%] h-[14vh] bg-purple-00 flex flex-col items-centerj justify-between">
                 <div class="h-[7vh] w-[100%] bg-white border-b-1 border-gray-300 flex items-center justify-between">
-                    <h1 class="text-[20px] font-bold">Chicken Burger</h1>
-                    <p class="text-[20px] font-bold text-[#fea116]">$119</p>
+                    <h1 class="text-[20px] font-bold">Gravy Momos</h1>
+                    <p class="text-[20px] font-bold text-[#fea116]">$120</p>
                 </div>
                 <div class="h-[6vh] w-[100%] bg-white">
                     <p class="font-serif text-gray-600">Ipsum ipsum clita erat amet dolor justo diam</p>
@@ -234,8 +240,8 @@
             <img src="./pictures/menu-4.jpg" alt="" class="mr-3 md:mr-0">
             <div class="w-[83%] h-[14vh] bg-purple-00 flex flex-col items-centerj justify-between">
                 <div class="h-[7vh] w-[100%] bg-white border-b-1 border-gray-300 flex items-center justify-between">
-                    <h1 class="text-[20px] font-bold">Chicken Burger</h1>
-                    <p class="text-[20px] font-bold text-[#fea116]">$119</p>
+                    <h1 class="text-[20px] font-bold">Chicken</h1>
+                    <p class="text-[20px] font-bold text-[#fea116]">$344</p>
                 </div>
                 <div class="h-[6vh] w-[100%] bg-white">
                     <p class="font-serif text-gray-600">Ipsum ipsum clita erat amet dolor justo diam</p>
@@ -247,8 +253,8 @@
             <img src="./pictures/menu-5.jpg" alt="" class="mr-3 md:mr-0">
             <div class="w-[83%] h-[14vh] bg-purple-00 flex flex-col items-centerj justify-between">
                 <div class="h-[7vh] w-[100%] bg-white border-b-1 border-gray-300 flex items-center justify-between">
-                    <h1 class="text-[20px] font-bold">Chicken Burger</h1>
-                    <p class="text-[20px] font-bold text-[#fea116]">$119</p>
+                    <h1 class="text-[20px] font-bold">Pasta</h1>
+                    <p class="text-[20px] font-bold text-[#fea116]">$209</p>
                 </div>
                 <div class="h-[6vh] w-[100%] bg-white">
                     <p class="font-serif text-gray-600">Ipsum ipsum clita erat amet dolor justo diam</p>
@@ -260,8 +266,8 @@
             <img src="./pictures/menu-6.jpg" alt="" class="mr-3 md:mr-0">
             <div class="w-[83%] h-[14vh] bg-purple-00 flex flex-col items-centerj justify-between">
                 <div class="h-[7vh] w-[100%] bg-white border-b-1 border-gray-300 flex items-center justify-between">
-                    <h1 class="text-[20px] font-bold">Chicken Burger</h1>
-                    <p class="text-[20px] font-bold text-[#fea116]">$119</p>
+                    <h1 class="text-[20px] font-bold">French Fries</h1>
+                    <p class="text-[20px] font-bold text-[#fea116]">$450</p>
                 </div>
                 <div class="h-[6vh] w-[100%] bg-white">
                     <p class="font-serif text-gray-600">Ipsum ipsum clita erat amet dolor justo diam</p>
@@ -273,8 +279,8 @@
             <img src="./pictures/menu-7.jpg" alt="" class="mr-3 md:mr-0">
             <div class="w-[83%] h-[14vh] bg-purple-00 flex flex-col items-centerj justify-between">
                 <div class="h-[7vh] w-[100%] bg-white border-b-1 border-gray-300 flex items-center justify-between">
-                    <h1 class="text-[20px] font-bold">Chicken Burger</h1>
-                    <p class="text-[20px] font-bold text-[#fea116]">$119</p>
+                    <h1 class="text-[20px] font-bold">Americano pizza</h1>
+                    <p class="text-[20px] font-bold text-[#fea116]">$110</p>
                 </div>
                 <div class="h-[6vh] w-[100%] bg-white">
                     <p class="font-serif text-gray-600">Ipsum ipsum clita erat amet dolor justo diam</p>
@@ -287,7 +293,7 @@
             <div class="w-[83%] h-[14vh] bg-purple-00 flex flex-col items-centerj justify-between">
                 <div class="h-[7vh] w-[100%] bg-white border-b-1 border-gray-300 flex items-center justify-between">
                     <h1 class="text-[20px] font-bold">Chicken Burger</h1>
-                    <p class="text-[20px] font-bold text-[#fea116]">$119</p>
+                    <p class="text-[20px] font-bold text-[#fea116]">$210</p>
                 </div>
                 <div class="h-[6vh] w-[100%] bg-white">
                     <p class="font-serif text-gray-600">Ipsum ipsum clita erat amet dolor justo diam</p>
@@ -297,7 +303,38 @@
         
     </div>
 </div>
-<!-- SECTION 5 END -->
+<!-- SECTION 4 END -->
+
+
+
+
+<!-- SECTION 5 START  -->
+ <section class="min-h-[90vh] bg-orange-00 my-5 flex-col flex md:flex-row items-center justify-between">
+    <img src="./pictures/video.jpg" alt="" data-aos="fade-right" data-aos-duration="900">
+    <div class="min-h-[76vh] md:w-[50%] text-gray-900 font-bold bg-gray-900 flex flex-wrap items-center justify-evenly" data-aos="fade-left" data-aos-duration="900">
+        <p class="w-[92%] text-[22px] text-[#fea116]">Reservation</p>
+        <h1 class="text-[40px] text-[white] w-[92%]">Book A Table Online</h1>
+        <form action="form1" class="bg-white w-[44%]">
+            <input type = "text" placeholder="Your name" class="p-4 w-[100%]">
+        </form>
+        <form action="form2" class="bg-white w-[44%]">
+            <input type = "text" placeholder="Your Email" class="p-4 w-[100%]">
+        </form>
+        <form action="form2" class="bg-white w-[44%]">
+            <input type = "text" placeholder="Date & Time" class="p-4 w-[100%]">
+        </form>
+        <form action="form2" class="bg-white w-[44%]">
+            <input type = "text" placeholder="No. of people" class="p-4 w-[100%]">
+        </form>
+        <form action="form2" class="bg-white w-[92%] h-[16vh]">
+            <input type = "text" placeholder="Special Request" class="p-4 h-[100%] w-[100%]">
+        </form>
+
+        <button class="ring-1 bg-[#fea116] p-3 rounded-[10px] text-white font-sans font-bold w-[92%] shadow-sm shadow-white hover:scale-95 hover:bg-gray-800">BOOK NOW</button>
+ 
+    </div>
+ </section>
+<!-- SECTION 5 END  -->
 
 
 
