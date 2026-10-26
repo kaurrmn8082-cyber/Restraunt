@@ -14,6 +14,61 @@
 
 <style>
 
+@media screen and (max-width:768px){
+    nav{
+        justify-content: space-between;
+        ul{
+            animation: slide .2s linear;
+            display: none; 
+            /* background-color: aqua; */
+            flex-direction: column;
+            position: absolute;
+            width: 25%;
+            height: 25vh;
+            top: 60px;
+            padding: 10px;
+            right: 0;
+            color: white;
+            background-color: #ea920e;
+            border-radius: 20px;
+        }
+
+        li{
+            animation: slide2 .3s linear;
+        }
+        
+        .show{
+            display: flex;
+            /* flex-direction: column; */
+        }
+        .menu{
+            position: relative;
+            display: block;
+            font-size: 30px;     
+        }
+    }
+}
+
+
+@keyframes slide{
+        from {
+            transform: translateX(100px);
+        }
+        to{
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slide2{
+        from {
+            transform: scale(.1);
+        }
+        to{
+            transform: scale(1);
+        }
+    }
+
+
 
    @keyframes spin2 {
         from{
@@ -69,7 +124,7 @@
             <i class="ri-restaurant-fill w-[55px] md:w-[75px] md:h-[70px] h-[50px] my-2 text-center text-white bg-[#fea116] rounded-full text-[35px] md:text-[55px]"></i>
             <h1 class="md:text-[45px] text-[35px] text-shadow-lg text-shadow-sky-950">Restoran</h1>
         </div>
-        <ul class="hidden md:flex items-center justify-between w-[50%] text-white">
+        <ul class="ul hidden md:flex items-center justify-between w-[50%] text-white">
             <li class="hover:text-[#fea116]">HOME</li>
             <li class="hover:text-[#fea116]">ABOUT</li>
             <li class="hover:text-[#fea116]">SERVICE</li>
@@ -79,9 +134,9 @@
                 <i class="ri-arrow-down-s-fill"></i>
             </div>
             <li class="hover:text-[#fea116]">CONTACT</li>
-            <button class="ring-2 bg-[#fea116] p-3 font-sans font-bold w-[170px] rounded-[50px] shadow-md shadow-white hover:scale-95 hover:bg-black">BOOK A TABLE</button>
+            <button class="hidden md:ring-2 bg-[#fea116] p-3 font-sans font-bold w-[170px] rounded-[50px] shadow-md shadow-white hover:scale-95 hover:bg-black">BOOK A TABLE</button>
         </ul>
-        <i class="md:hidden ri-menu-line text-[25px] text-[#fea116]"></i>
+        <i class="md:hidden ri-menu-line menu text-[25px] text-[#fea116]"></i>
     </nav>
 
 
@@ -469,6 +524,18 @@
 
 
 </body>
+
+<script>
+        let menu = document.querySelector(".menu")
+        let ul = document.querySelector(".ul")
+
+        menu.addEventListener("click",()=>{
+            ul.classList.toggle("show")
+        })
+    </script>
+
+
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
