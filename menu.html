@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<style>
+    @media screen and (max-width:768px){
+    nav{
+        justify-content: space-between;
+        ul{
+            animation: slide .2s linear;
+            display: none; 
+            /* background-color: aqua; */
+            flex-direction: column;
+            position: absolute;
+            width: 25%;
+            height: 25vh;
+            top: 60px;
+            padding: 10px;
+            right: 0;
+            color: white;
+            background-color: #ea920e;
+            border-radius: 20px;
+        }
+
+        li{
+            animation: slide2 .3s linear;
+        }
+        
+        .show{
+            display: flex;
+            /* flex-direction: column; */
+        }
+        .menu{
+            position: relative;
+            display: block;
+            font-size: 30px;     
+        }
+    }
+}
+
+
+@keyframes slide{
+        from {
+            transform: translateX(100px);
+        }
+        to{
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slide2{
+        from {
+            transform: scale(.1);
+        }
+        to{
+            transform: scale(1);
+        }
+    }
+
+
+/* SECTION 6  */
+.icon{
+    background-color: #fea116;
+    padding: 7px;
+    font-size: 27px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    color: white;
+}
+/* SECTION 6  */
+</style>
+<body>
+
+    <nav class="flex z-1 fixed w-full items-center justify-between px-9 bg-blue-00 font-serif">
+        <div class="flex items-center text-[#fea116] gap-3">
+            <i class="ri-restaurant-fill w-[55px] md:w-[75px] md:h-[70px] h-[50px] my-2 text-center text-white bg-[#fea116] rounded-full text-[35px] md:text-[55px]"></i>
+            <h1 class="md:text-[45px] text-[35px] text-shadow-lg text-shadow-sky-950">Restoran</h1>
+        </div>
+        <ul class="ul hidden md:flex items-center justify-between w-[50%] text-white">
+            <li class="hover:text-[#fea116]">
+                <a href="./index.html">HOME</a>
+            </li>
+            <li class="hover:text-[#fea116]">
+                <a href="./about.html">ABOUT</a>
+            </li>
+            <li class="hover:text-[#fea116]">
+                <a href="./service.html">SERVICE</a>
+            </li>
+            <li class="hover:text-[#fea116]">
+                <a href="./menu.html">MENU</a>
+            </li>
+
+                <li>PAGES<i class="ri-arrow-down-s-fill hover:text-[#fea116]"></i></li>
+                
+            <li class="hover:text-[#fea116]">CONTACT</li>
+            <button class="hidden md:block md:ring-2 bg-[#fea116] p-3 font-sans font-bold w-[170px] rounded-[50px] shadow-md shadow-white hover:scale-95 hover:bg-black">BOOK A TABLE</button>
+        </ul>
+        <i class="md:hidden ri-menu-line menu text-[25px] text-[#fea116]"></i>
+    </nav>
+
+
+    <div class="min-h-[60vh] bg-[url('./pictures/bg-hero.jpg')] bg-cover w-full">
+        <div class="min-h-[60vh] w-[100%] bg-gray-900/90 flex flex-col justify-center items-center">
+            <h1 class="text-[60px] font-bold text-white">Food Menu</h1>
+            <div class="h-[9vh] w-[15%] flex items-center justify-evenly text-white">
+                <h2 class="text-[#fea116]">HOME <span class="text-gray-500 ml-1">/</span></h2>
+                <h2 class="text-[#fea116]">PAGES <span class="text-gray-500 ml-1">/</span></h2></h2>
+                <h2>MENU</h2>
+            </div>
+        </div>
+    </div>
+
+
+<!-- SECTION 2 START  -->
+ <div class="min-h-[100vh] md:w-[95%] mx-auto mt-10 bg-gray-0">
+    <div class="min-h-[20vh] md:w-[40%] mx-auto font-bold text-center bg-gray-0"  data-aos-duration="900" data-aos="fade-right">
+        <p class="text-[25px]">Food Menu</p>
+        <h1 class="text-[50px] text-[#fea116] border-1 shadow-md shadow-[#fea116]">Most Popular Items</h1>
+    </div>
+    <div class="min-h-[10vh] md:w-[35%] flex items-center justify-between mx-auto bg-gray-00 my-5 px-2" data-aos-duration="900" data-aos="fade-left">
+
+        <div class="min-h-[10vh] w-[31%] bg-pink-00 border-[#fea116] border-2 border-dashed rounded-[10px] flex items-center justify-evenly">
+            <i class="ri-cup-fill text-[40px] text-[#fea116]"></i>
+            <h3 class="text-[17px]">Popular <br> <span class="font-bold">Breakfast</span></h3>
+        </div>
+        
+        <div class="min-h-[10vh] w-[31%] bg-pink-00 border-[#fea116] border-2 border-dashed rounded-[10px] flex items-center justify-evenly">
+            <i class="i ri-cake-3-fill text-[40px] text-[#fea116]"></i>
+            <h3 class="text-[17px]">Special <br> <span class="font-bold">Lunch</span></h3>
+        </div>
+
+        <div class="min-h-[10vh] w-[31%] bg-pink-00 border-[#fea116] border-2 border-dashed rounded-[10px] flex items-center justify-evenly">
+            <i class="ri-restaurant-2-fill text-[40px] text-[#fea116]"></i>
+            <h3 class="text-[17px]">Lovely <br> <span class="font-bold">Dinner</span></h3>
+        </div>
+    </div>
+
+    <div class="min-h-[90vh] w-[90%] flex flex-wrap items-center bg-gray-00 mx-auto md:gap-0 gap-8 md:justify-between mt-12" data-aos="fade-up"  data-aos-duration="800">
+
+        <div class="h-[15vh] md:w-[48%] bg-pink-00 flex items-center justify-between shadow-sm shadow-[#f0b966] px-3">
+            <img src="./pictures/menu-1.jpg" alt="" class="mr-3 md:mr-0">
+            <div class="w-[83%] h-[14vh] bg-purple-00 flex flex-col items-centerj justify-between">
+                <div class="h-[7vh] w-[100%] bg-white border-b-1 border-gray-300 flex items-center justify-between">
+                    <h1 class="text-[20px] font-bold">Mushrooms</h1>
+                    <p class="text-[20px] font-bold text-[#fea116]">$119</p>
+                </div>
+                <div class="h-[6vh] w-[100%] bg-white">
+                    <p class="font-serif text-gray-600">Ipsum ipsum clita erat amet dolor justo diam</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="h-[15vh] md:w-[48%] bg-pink-00 flex items-center justify-between shadow-sm shadow-[#f0b966] px-3">
+            <img src="./pictures/menu-2.jpg" alt="" class="mr-3 md:mr-0">
+            <div class="w-[83%] h-[14vh] bg-purple-00 flex flex-col items-centerj justify-between">
+                <div class="h-[7vh] w-[100%] bg-white border-b-1 border-gray-300 flex items-center justify-between">
+                    <h1 class="text-[20px] font-bold">Sweet potatoes</h1>
+                    <p class="text-[20px] font-bold text-[#fea116]">$119</p>
+                </div>
+                <div class="h-[6vh] w-[100%] bg-white">
+                    <p class="font-serif text-gray-600">Ipsum ipsum clita erat amet dolor justo diam</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="h-[15vh] md:w-[48%] bg-pink-00 flex items-center justify-between shadow-sm shadow-[#f0b966] px-3">
+            <img src="./pictures/menu-3.jpg" alt="" class="mr-3 md:mr-0">
+            <div class="w-[83%] h-[14vh] bg-purple-00 flex flex-col items-centerj justify-between">
+                <div class="h-[7vh] w-[100%] bg-white border-b-1 border-gray-300 flex items-center justify-between">
+                    <h1 class="text-[20px] font-bold">Gravy Momos</h1>
+                    <p class="text-[20px] font-bold text-[#fea116]">$120</p>
+                </div>
+                <div class="h-[6vh] w-[100%] bg-white">
+                    <p class="font-serif text-gray-600">Ipsum ipsum clita erat amet dolor justo diam</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="h-[15vh] md:w-[48%] bg-pink-00 flex items-center justify-between shadow-sm shadow-[#f0b966] px-3">
+            <img src="./pictures/menu-4.jpg" alt="" class="mr-3 md:mr-0">
+            <div class="w-[83%] h-[14vh] bg-purple-00 flex flex-col items-centerj justify-between">
+                <div class="h-[7vh] w-[100%] bg-white border-b-1 border-gray-300 flex items-center justify-between">
+                    <h1 class="text-[20px] font-bold">Chicken</h1>
+                    <p class="text-[20px] font-bold text-[#fea116]">$344</p>
+                </div>
+                <div class="h-[6vh] w-[100%] bg-white">
+                    <p class="font-serif text-gray-600">Ipsum ipsum clita erat amet dolor justo diam</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="h-[15vh] md:w-[48%] bg-pink-00 flex items-center justify-between shadow-sm shadow-[#f0b966] px-3">
+            <img src="./pictures/menu-5.jpg" alt="" class="mr-3 md:mr-0">
+            <div class="w-[83%] h-[14vh] bg-purple-00 flex flex-col items-centerj justify-between">
+                <div class="h-[7vh] w-[100%] bg-white border-b-1 border-gray-300 flex items-center justify-between">
+                    <h1 class="text-[20px] font-bold">Pasta</h1>
+                    <p class="text-[20px] font-bold text-[#fea116]">$209</p>
+                </div>
+                <div class="h-[6vh] w-[100%] bg-white">
+                    <p class="font-serif text-gray-600">Ipsum ipsum clita erat amet dolor justo diam</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="h-[15vh] md:w-[48%] bg-pink-00 flex items-center justify-between shadow-sm shadow-[#f0b966] px-3">
+            <img src="./pictures/menu-6.jpg" alt="" class="mr-3 md:mr-0">
+            <div class="w-[83%] h-[14vh] bg-purple-00 flex flex-col items-centerj justify-between">
+                <div class="h-[7vh] w-[100%] bg-white border-b-1 border-gray-300 flex items-center justify-between">
+                    <h1 class="text-[20px] font-bold">French Fries</h1>
+                    <p class="text-[20px] font-bold text-[#fea116]">$450</p>
+                </div>
+                <div class="h-[6vh] w-[100%] bg-white">
+                    <p class="font-serif text-gray-600">Ipsum ipsum clita erat amet dolor justo diam</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="h-[15vh] md:w-[48%] bg-pink-00 flex items-center justify-between shadow-sm shadow-[#f0b966] px-3">
+            <img src="./pictures/menu-7.jpg" alt="" class="mr-3 md:mr-0">
+            <div class="w-[83%] h-[14vh] bg-purple-00 flex flex-col items-centerj justify-between">
+                <div class="h-[7vh] w-[100%] bg-white border-b-1 border-gray-300 flex items-center justify-between">
+                    <h1 class="text-[20px] font-bold">Americano pizza</h1>
+                    <p class="text-[20px] font-bold text-[#fea116]">$110</p>
+                </div>
+                <div class="h-[6vh] w-[100%] bg-white">
+                    <p class="font-serif text-gray-600">Ipsum ipsum clita erat amet dolor justo diam</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="h-[15vh] md:w-[48%] bg-pink-00 flex items-center justify-between shadow-sm shadow-[#f0b966] px-3">
+            <img src="./pictures/menu-8.jpg" alt="" class="mr-3 md:mr-0">
+            <div class="w-[83%] h-[14vh] bg-purple-00 flex flex-col items-centerj justify-between">
+                <div class="h-[7vh] w-[100%] bg-white border-b-1 border-gray-300 flex items-center justify-between">
+                    <h1 class="text-[20px] font-bold">Chicken Burger</h1>
+                    <p class="text-[20px] font-bold text-[#fea116]">$210</p>
+                </div>
+                <div class="h-[6vh] w-[100%] bg-white">
+                    <p class="font-serif text-gray-600">Ipsum ipsum clita erat amet dolor justo diam</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+ <!-- SECTION 2 END  -->
+
+
+
+<!-- FOOTER START  -->
+ <section class="min-h-[70vh] bg-gray-900 flex flex-col items-center justify-evenly font-serif text-white" data-aos="zoom-in" data-aos-duration="500">
+    <div class="min-h-[50vh] md:w-[90%] flex flex-col md:flex-row items-center justify-center md:text-start bg-red-00 border-b-2 border-gray-600">
+        <footer class="h-[48vh] md:w-[22%] bg-blue-0 md:text-start text-center">
+            <h1 class="text-[30px] text-[#fea116] mb-3">Company</h1>
+            <ul class="flex flex-col items-center md:items-start justify-evenly h-[25vh]">
+                <li>About us</li>
+                <li>Contact us</li>
+                <li>Reservation</li>
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+            </ul>
+        </footer>
+        <footer class="h-[48vh] md:w-[22%] bg-blue-0 md:text-start text-center">
+            <h1 class="text-[30px] text-[#fea116] mb-3">Contact</h1>
+            <ul class="flex flex-col items-center md:items-start justify-evenly h-[15vh]">
+                <li><i class="ri-map-pin-2-fill mr-3 text-[20px]"></i>123 Street, New York, USA</li>
+                <li><i class="ri-phone-fill mr-3 text-[20px]"></i>+012 345 67890</li>
+                <li><i class="ri-mail-open-fill mr-3 text-[20px]"></i>info@example.com</li>
+            </ul>
+        </footer>
+        <footer class="h-[48vh] md:w-[22%] bg-blue-0 md:text-start text-center">
+            <h1 class="text-[30px] text-[#fea116] mb-3">Opening</h1>
+            <ul class="flex flex-col md:items-start items-center justify-evenly h-[22vh]">
+                <li class="text-[20px]">Monday - Saturday</li>
+                <li>09AM - 09PM</li>
+                <li class="text-[20px] mt-3">Sunday</li>
+                <li>10AM - 08PM</li>
+            </ul>
+        </footer>
+        <footer class="h-[48vh] md:w-[22%] bg-blue-0 md:text-start text-center">
+            <h1 class="text-[30px] text-[#fea116] mb-3">Newsletter</h1>
+            <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+             <form action="form1" class="w-[90%] rounded-full flex items-center justify-evenly bg-white text-gray-900 mt-11">
+            <input type = "text" placeholder="Your name" class="rounded-full p-4 w-[100%]">
+            <button class="ring-2 h-[6vh] w-[70%] rounded-full bg-[#fea116] text-white mr-3">SIGN UP</button>
+        </form>
+        </footer>
+    </div>
+
+    <div class="min-h-[15vh] w-[80%] flex flex-col md:flex-row items-center justify-between bg-red-00">
+        <div class="h-[14vh] md:w-[45%] md:text-start text-center bg-blue-0 leading-11">
+            <p>© <span class="underline">Your Site Name,</span> All Right Reserved. Designed By <span class="underline">HTML Codex <br></span>Distributed By <span class="underline">ThemeWagon</span></p>
+        </div>
+        <div class="h-[14vh] md:w-[30%] md:text-start text-center bg-blue-0">
+            <ul class="flex items-center justify-between mt-8 gap-6 md:gap-0">
+                <li class="w-[20%] border-r-1 border-gray-700">Home</li>
+                <li class="w-[25%] border-r-1 border-gray-700">Cookies</li>
+                <li class="w-[20%] border-r-1 border-gray-700">Help</li>
+                <li>FAQ's</li>
+            </ul>
+        </div>
+    </div>
+</section>
+ <!-- FOOTER END  -->
+
+
+
+
+    </body>
+
+<script>
+        let menu = document.querySelector(".menu")
+        let ul = document.querySelector(".ul")
+
+        menu.addEventListener("click",()=>{
+            ul.classList.toggle("show")
+        })
+    </script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</html>
